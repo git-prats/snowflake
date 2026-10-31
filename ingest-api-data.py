@@ -40,7 +40,7 @@ def snowpark_basic_auth() -> Session:
 
 
 def get_air_quality_data(api_key, limit):
-    api_url = 'https://api.data.gov.in/resource/3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69'
+    api_url = 'https://api.data.gov.in/resource/579b464db66ec23bdd000001f3011488fa684db1651b8c7af41fa4e7'
     
     # Parameters for the API request
     params = {
