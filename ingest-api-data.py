@@ -1,4 +1,4 @@
-import os
++import os
 import sys
 import json
 import logging
@@ -26,7 +26,7 @@ today_string = current_time_ist.strftime('%Y_%m_%d')
 
 def snowpark_basic_auth() -> Session:
     connection_parameters = {
-        "ACCOUNT": "YZZZCYO-DR72872",
+        "ACCOUNT": "go86522.ap-southeast-7.aws",
         "USER": "prathmesh.haware@gmail.com",
         "AUTHENTICATOR": "externalbrowser",
         "ROLE": "SYSADMIN",
