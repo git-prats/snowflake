@@ -26,21 +26,20 @@ today_string = current_time_ist.strftime('%Y_%m_%d')
 # Following credential has to come using secret whie running in automated way
 def snowpark_basic_auth() -> Session:
     connection_parameters = {
-        "ACCOUNT":"YZZZCYO-DR72872",
-        "region":"ap-southeast-7.aws",
-        "USER":"prathmesh.haware@gmail.com",
-        "AUTHENTICATOR": "externalbrowser",
-        "ROLE":"SYSADMIN",
-        "DATABASE":"dev_db",
-        "SCHEMA":"stage_sch",
-        "WAREHOUSE":"load_wh"
-    }
+    "ACCOUNT": "YZZZCYO-DR72872",
+    "USER": "prathmesh.haware@gmail.com",
+    "AUTHENTICATOR": "externalbrowser",
+    "ROLE": "SYSADMIN",
+    "DATABASE": "DEV_DB",
+    "SCHEMA": "STAGE_SCH",
+    "WAREHOUSE": "LOAD_WH"
+}
     # creating snowflake session object
     return Session.builder.configs(connection_parameters).create()
 
 
 def get_air_quality_data(api_key, limit):
-    api_url = 'https://api.data.gov.in/resource/3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69?api-key=579b464db66ec23bdd000001f3011488fa684db1651b8c7af41fa4e7&format=json'
+    api_url = 'https://api.data.gov.in/resource/3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69'
     
     # Parameters for the API request
     params = {
